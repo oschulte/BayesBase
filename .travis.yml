@@ -1,7 +1,6 @@
 language: java
 services:
   - mysql
-install: ant deps
 jdk:
   - oraclejdk8
 before_script:
