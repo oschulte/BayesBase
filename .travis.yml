@@ -1,0 +1,19 @@
+language: java
+services:
+  - mysql
+install: ant deps
+jdk:
+  - openjdk8
+before_script:
+  - mysqladmin -h127.0.0.1 -uroot -p'' password '123456'
+  - mysql -e -uroot -p123456 < testsql/unielwin_course.sql
+  - mysql -e -uroot -p123456 < testsql/unielwin_prof.sql
+  - mysql -e -uroot -p123456 < testsql/unielwin_RA.sql
+  - mysql -e -uroot -p123456 < testsql/unielwin_registration.sql
+  - mysql -e -uroot -p123456 < testsql/unielwin_student.sql
+script: 
+  - cd jar
+  - java -jar RunBB
+after_script:
+  - ls
+  - mysql -e "show databases;" -uroot -p123456
