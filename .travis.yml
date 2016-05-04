@@ -13,6 +13,16 @@ before_script:
 script: 
   - cd jar
   - java -jar RunBB.jar
-after_script:
   - ls
+  - cd ../src
+  - javac -cp ".:./lib/*" Config.java BZScriptRunner.java MakeSetup.java
+  - javac -cp ".:./lib/*" RunBB.java
+  - javac -cp ".:./lib/*" MakeTargetSetup.java
+  - javac -cp ".:./lib/*" FunctorWrapper.java
+  - java -cp ".:./lib/*" MakeSetup
+  - java -cp ".:./lib/*" RunBB
+  - java -cp ".:./lib/*" MakeTargetSetup
+  - java -cp ".:./lib/*" FunctorWrapper
+  - ls
+after_script:
   - mysql -e "show databases;" -uroot -p123456
