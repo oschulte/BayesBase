@@ -9,10 +9,5 @@ For more information about this project, visit our [project website](http://www.
 ###Compile & Run  
 + Go into `src` folder and modify `config.cfg`  
 + `javac -cp ".:./lib/*" Config.java BZScriptRunner.java MakeSetup.java`  
-+ `java -cp ".:./lib/*" MakeSetup`  
 + `javac -cp ".:./lib/*" RunBB.java`  
 + `java -cp ".:./lib/*" RunBB`  
-+ `javac -cp ".:./lib/*" MakeTargetSetup.java`  
-+ `java -cp ".:./lib/*" MakeTargetSetup`  
-+ `javac -cp ".:./lib/*" FunctorWrapper.java`  
-+ `java -cp ".:./lib/*" FunctorWrapper`  
