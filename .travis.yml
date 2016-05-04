@@ -3,7 +3,7 @@ services:
   - mysql
 install: ant deps
 jdk:
-  - openjdk8
+  - oraclejdk8
 before_script:
   - mysqladmin -h127.0.0.1 -uroot -p'' password '123456'
   - mysql -e -uroot -p123456 < testsql/unielwin_course.sql
