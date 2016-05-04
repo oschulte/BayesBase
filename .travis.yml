@@ -12,7 +12,7 @@ before_script:
   - mysql -uroot -p123456 < testsql/unielwin_student.sql
 script: 
   - cd jar
-  - java -jar RunBB
+  - java -jar RunBB.jar
 after_script:
   - ls
   - mysql -e "show databases;" -uroot -p123456
