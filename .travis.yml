@@ -5,11 +5,11 @@ jdk:
   - oraclejdk8
 before_script:
   - mysql -e "use mysql; update user set password=PASSWORD('123456') where User='root'; flush privileges;" -uroot
-  - mysql -e -uroot -p123456 < testsql/unielwin_course.sql
-  - mysql -e -uroot -p123456 < testsql/unielwin_prof.sql
-  - mysql -e -uroot -p123456 < testsql/unielwin_RA.sql
-  - mysql -e -uroot -p123456 < testsql/unielwin_registration.sql
-  - mysql -e -uroot -p123456 < testsql/unielwin_student.sql
+  - mysql -uroot -p123456 < testsql/unielwin_course.sql
+  - mysql -uroot -p123456 < testsql/unielwin_prof.sql
+  - mysql -uroot -p123456 < testsql/unielwin_RA.sql
+  - mysql -uroot -p123456 < testsql/unielwin_registration.sql
+  - mysql -uroot -p123456 < testsql/unielwin_student.sql
 script: 
   - cd jar
   - java -jar RunBB
