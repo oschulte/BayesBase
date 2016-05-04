@@ -1,6 +1,6 @@
 language: java
-services:
-  - mysql
+addons:
+  mariadb: '10.0'
 jdk:
   - oraclejdk8
 before_script:
