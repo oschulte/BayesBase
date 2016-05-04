@@ -23,10 +23,12 @@ script:
   - javac -cp ".:./lib/*" RunBB.java
   - javac -cp ".:./lib/*" MakeTargetSetup.java
   - javac -cp ".:./lib/*" FunctorWrapper.java
-  - java -cp ".:./lib/*" MakeSetup
-  - java -cp ".:./lib/*" RunBB
-  - java -cp ".:./lib/*" MakeTargetSetup
-  - java -cp ".:./lib/*" FunctorWrapper
+  - mv *.class ../
+  - cd ..
+  - java -cp ".:./src/lib/*" MakeSetup
+  - java -cp ".:./src/lib/*" RunBB
+  - java -cp ".:./src/lib/*" MakeTargetSetup
+  - java -cp ".:./src/lib/*" FunctorWrapper
   - ls
 after_script:
   - mysql -e "show databases;" -uroot -p123456
